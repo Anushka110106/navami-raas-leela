@@ -1,0 +1,295 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enhanced Hindu-themed Animations */
+@keyframes float-right {
+  0% {
+    transform: translateX(-100px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(50vw) rotate(180deg) scale(1.2);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) rotate(360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes float-left {
+  0% {
+    transform: translateX(100px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50vw) rotate(-180deg) scale(1.2);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(-100vw - 100px)) rotate(-360deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes divine-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 165, 0, 0.4);
+  }
+}
+
+@keyframes lotus-bloom {
+  0% {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8) rotate(360deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sacred-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+.animate-float-right {
+  animation: float-right 12s infinite linear;
+}
+
+.animate-float-left {
+  animation: float-left 15s infinite linear;
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out;
+}
+
+.animate-divine-glow {
+  animation: divine-glow 3s ease-in-out infinite;
+}
+
+.animate-lotus-bloom {
+  animation: lotus-bloom 6s ease-in-out infinite;
+}
+
+.animate-sacred-pulse {
+  animation: sacred-pulse 2s ease-in-out infinite;
+}
+
+/* Enhanced Hindu-themed Elements */
+.lotus-petal {
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.lotus-petal::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+  border-radius: 50%;
+}
+
+.mandala {
+  position: relative;
+  border-style: dotted;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.mandala::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #ffd700, #ff8c00);
+  border-radius: 50%;
+}
+
+.om-symbol {
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+  font-family: 'Devanagari', serif;
+}
+
+.floating-element {
+  filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced Custom scrollbar with Hindu theme */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, rgba(139, 69, 19, 0.3), rgba(255, 140, 0, 0.2));
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ffd700, #ff8c00, #dc2626);
+  border-radius: 6px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ffed4e, #ff7f00, #b91c1c);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  .text-responsive-xl {
+    font-size: 1.5rem;
+  }
+  .text-responsive-2xl {
+    font-size: 2rem;
+  }
+  
+  .floating-element {
+    display: none; /* Hide complex animations on mobile for performance */
+  }
+}
+
+/* Enhanced hover effects with divine theme */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(255, 140, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Divine gradient text animation */
+.divine-gradient-text {
+  background: linear-gradient(270deg, #ffd700, #ff8c00, #dc2626, #8b4513, #ffd700);
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: divine-gradient-shift 4s ease infinite;
+}
+
+@keyframes divine-gradient-shift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 0% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sacred border effects */
+.sacred-border {
+  border-image: linear-gradient(45deg, #ffd700, #ff8c00, #dc2626, #ffd700) 1;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.sacred-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ffd700, #ff8c00, #dc2626, #ffd700);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(4px);
+}
+
+/* Divine input styling */
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 40px rgba(255, 140, 0, 0.2);
+  border-color: #ffd700 !important;
+}
+
+/* Sacred button effects */
+button:hover {
+  filter: brightness(1.1) saturate(1.2);
+}
+
+/* Divine loading animation */
+@keyframes divine-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.divine-spinner {
+  animation: divine-spin 2s linear infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .om-symbol {
+    font-size: 2rem;
+  }
+  
+  .mandala {
+    width: 8px;
+    height: 8px;
+  }
+}
