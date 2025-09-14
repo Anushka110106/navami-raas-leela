@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, MapPin, Calendar, Clock, Users, Mail, Phone, Instagram, Facebook, Music, Sparkles, Star, Copy, Check, AlertCircle, Shield } from 'lucide-react';
+import EventSchedule from './components/EventSchedule';
 
 function App() {
   const [showRegistration, setShowRegistration] = useState(false);
@@ -191,7 +192,7 @@ function App() {
   const totalAmount = ticketPrice; // Always single person pricing
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-600 via-red-600 to-yellow-600 overflow-hidden relative">
+  <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-700 via-60% to-yellow-400 overflow-hidden relative">
       {/* Modern Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Floating Elements */}
@@ -228,7 +229,7 @@ function App() {
       </div>
 
       {/* Modern Navigation */}
-      <nav className="fixed top-0 w-full bg-gradient-to-r from-red-900/80 to-orange-900/80 backdrop-blur-md z-50 border-b-2 border-yellow-400/30">
+  <nav className="fixed top-0 w-full bg-gradient-to-r from-purple-900/80 via-pink-800/80 to-yellow-500/80 backdrop-blur-md z-50 border-b-2 border-yellow-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="text-white font-bold text-xl flex items-center">
@@ -260,7 +261,7 @@ function App() {
       </nav>
 
       {/* Hero Section - Gen Z Style */}
-      <section id="home" className="min-h-screen flex items-center justify-center relative">
+  <section id="home" className="min-h-screen flex items-center justify-center relative pt-24">
         <div className="text-center z-10 px-4 max-w-6xl mx-auto">
           <div className="mb-8">
             <div className="text-6xl mb-4 animate-pulse">🪷 ✨ 🪷</div>
@@ -277,9 +278,10 @@ function App() {
 
           <div className="bg-gradient-to-r from-red-800/40 to-orange-800/40 backdrop-blur-md rounded-2xl p-8 border-2 border-yellow-400/30 mb-8">
             <p className="text-lg md:text-2xl text-white mb-6 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
-              <span className="text-yellow-300 font-bold">🙏 Hey Beautiful Souls! 🙏</span><br />
-              Get ready for the most epic cultural celebration of the year!<br />
-              <span className="text-orange-300">Experience traditional dance meets modern vibes!</span>
+              <span className="text-yellow-300 font-bold">✨ Namaste Everyone! ✨</span><br />
+              ✨ Get ready to be part of the grandest cultural celebration of the year!
+Join us for an unforgettable evening of dance, music, and festivities—
+a beautiful fusion of timeless traditions and youthful energy. ✨<br />
             </p>
             <div className="text-lg text-yellow-200 italic">
               "Where tradition meets the coolest generation ✨"
@@ -308,7 +310,7 @@ function App() {
       </section>
 
       {/* About Section - Gen Z Friendly */}
-      <section id="about" className="py-20 bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm">
+  <section id="about" className="py-20 bg-gradient-to-r from-purple-900/30 via-pink-800/30 to-yellow-400/30 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
@@ -319,9 +321,9 @@ function App() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-br from-red-800/40 to-orange-800/40 backdrop-blur-md rounded-2xl p-8 border-2 border-yellow-400/30 hover:scale-105 transition-transform duration-300 group">
-              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🎭</div>
-              <h3 className="text-2xl font-bold text-yellow-300 mb-4">Epic Performances</h3>
-              <p className="text-white">Watch amazing cultural performances that'll blow your mind and connect you to your roots</p>
+              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">💃🕺🪔</div>
+              <h3 className="text-2xl font-bold text-yellow-300 mb-4">Traditional Glamour</h3>
+              <p className="text-white">Flaunt your festive outfits in style and Celebrate with high-energy Garba & Dandiya moves</p>
             </div>
 
             <div className="bg-gradient-to-br from-orange-800/40 to-yellow-800/40 backdrop-blur-md rounded-2xl p-8 border-2 border-yellow-400/30 hover:scale-105 transition-transform duration-300 group">
@@ -366,45 +368,24 @@ function App() {
               <h3 className="text-2xl font-bold text-yellow-300 mb-4">The Venue</h3>
               <p className="text-xl text-white mb-2">🏨 Mukut Regency</p>
               <p className="text-white opacity-80">The perfect space for an unforgettable night</p>
-              <div className="text-sm text-yellow-200 mt-2 italic">(Final venue details coming soon!)</div>
+              <div className="text-sm text-yellow-200 mt-2 italic">Plot no. CC1, Sector 13, Vasundhara, Ghaziabad, Uttar Pradesh 201012, India</div>
             </div>
 
             <div className="bg-gradient-to-br from-orange-800/40 to-yellow-800/40 backdrop-blur-md rounded-2xl p-8 border-2 border-yellow-400/30 hover:scale-105 transition-transform duration-300">
               <Calendar className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-yellow-300 mb-4">Save The Date</h3>
               <p className="text-xl text-white mb-2">📅 September 28, 2025</p>
-              <p className="text-white opacity-80">🕕 6:00 PM - Let's Get Started!</p>
+              <p className="text-white opacity-80">🕕 5:00 PM - Let's Get Started!</p>
               <div className="text-sm text-yellow-200 mt-2 italic">Perfect timing for the weekend vibes</div>
             </div>
           </div>
 
-          {/* What to Expect */}
-          <div className="bg-gradient-to-r from-purple-800/30 to-pink-800/30 backdrop-blur-md rounded-2xl p-8 border-2 border-yellow-400/30">
-            <h3 className="text-3xl font-bold text-white mb-6">🎉 What's Happening?</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-white">
-              <div className="text-center">
-                <div className="text-3xl mb-2">🎭</div>
-                <p className="text-sm">Amazing Performances</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-2">🎵</div>
-                <p className="text-sm">Live Music</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-2">🏆</div>
-                <p className="text-sm">Dance Competitions</p>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl mb-2">🍽️</div>
-                <p className="text-sm">Great Food</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
+
       {/* Countdown Timer Section */}
-      <section id="countdown" className="py-20 bg-gradient-to-r from-red-900/30 to-orange-900/30 backdrop-blur-sm">
+  <section id="countdown" className="py-20 bg-gradient-to-r from-purple-900/30 via-pink-800/30 to-yellow-400/30 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
             <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
@@ -438,6 +419,14 @@ function App() {
               Every second brings us closer to the most amazing cultural celebration. Time to start planning your outfit! ✨
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Event Schedule Section */}
+      <section id="schedule" className="py-20">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-12">Event Schedule</h2>
+          <EventSchedule />
         </div>
       </section>
 
@@ -603,7 +592,7 @@ function App() {
       </section>
 
       {/* Modern Footer */}
-      <footer className="bg-gradient-to-r from-red-900/60 to-orange-900/60 backdrop-blur-md py-16 border-t-2 border-yellow-400/30">
+  <footer className="bg-gradient-to-r from-purple-900/60 via-pink-800/60 to-yellow-400/60 backdrop-blur-md py-16 border-t-2 border-yellow-400/30">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center md:text-left">
             <div>
